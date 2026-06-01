@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ξερή - Είσοδος</title>
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+
+    <h1>&#9824; Ξερή &#9830;</h1>
+
+    <!-- Login -->
+    <div id="login-section" class="card-box">
+      <h2>Είσοδος</h2>
+      <input type="text" id="username-input" placeholder="Όνομα παίκτη..." maxlength="30">
+      <button class="btn-primary" id="login-btn">Είσοδος</button>
+      <div class="error" id="login-error"></div>
+    </div>
+
+    <!-- Lobby -->
+    <div id="lobby">
+      <div class="lobby-header">
+        <h2>Αίθουσα Παιχνιδιών</h2>
+        <div>
+          <span class="user-info" id="logged-username"></span>
+          &nbsp;
+          <button class="btn-danger" id="logout-btn">Έξοδος</button>
+        </div>
+      </div>
+      <div class="games-list">
+        <h3>Διαθέσιμα Παιχνίδια</h3>
+        <div id="games-container"><div class="empty-msg">Φόρτωση...</div></div>
+      </div>
+      <div class="create-btn-wrap">
+        <button class="btn-secondary" id="create-game-btn">+ Δημιουργία Νέου Παιχνιδιού</button>
+      </div>
+    </div>
+
+    <div class="notification" id="notif"></div>
+
+    <script src="js/index.js"></script>
+  </body>
+</html>

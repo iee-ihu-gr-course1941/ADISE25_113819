@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="el">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Ξερή</title>
+
+    <link rel="stylesheet" href="css/game.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <div id="header">
+      <h1>&#9824; Ξερή</h1>
+      <div class="info" id="header-info">Φόρτωση...</div>
+      <button class="btn-sm btn-back" onclick="window.location.href='index.html'">&#8592; Λόμπι</button>
+    </div>
+
+    <div id="board">
+
+      <!-- Opponent -->
+      <div class="panel" id="opp-panel">
+        <div class="panel-title">Αντίπαλος</div>
+        <div id="opp-name" style="font-size:1rem;font-weight:bold;margin-bottom:8px;">—</div>
+        <div id="opp-hand-display"></div>
+        <div class="coll-bar" id="opp-coll-bar" style="margin-top:8px;"></div>
+      </div>
+
+      <!-- Message -->
+      <div id="msg-bar" class="waiting">Αναμονή...</div>
+
+      <!-- Table -->
+      <div class="panel">
+        <div class="panel-title">Τραπέζι &nbsp;<span id="round-label" style="color:#fff176"></span></div>
+        <div id="table-area"></div>
+        <div class="deck-info" id="deck-info"></div>
+      </div>
+
+      <!-- My info -->
+      <div class="panel">
+        <div class="panel-title">Εγώ</div>
+        <div id="my-name" style="font-size:1rem;font-weight:bold;margin-bottom:8px;">—</div>
+        <div class="coll-bar" id="my-coll-bar" style="margin-bottom:10px;"></div>
+        <div id="hand-cards"></div>
+        <div style="margin-top:8px;font-size:0.78rem;color:#aaa;" id="action-hint"></div>
+      </div>
+
+      <!-- Scores (shown on finish) -->
+      <div class="panel" id="scores-panel">
+        <div class="panel-title">&#127942; Αποτελέσματα</div>
+        <div id="scores-content"></div>
+        <div style="text-align:center;margin-top:12px;">
+          <button class="btn-sm btn-back" onclick="window.location.href='index.html'" style="background:#4caf50;color:#fff;padding:10px 24px;font-size:1rem;">Νέο Παιχνίδι</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="toast"></div>
+
+    <script src="js/game.js"></script>
+  </body>
+</html>
